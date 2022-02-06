@@ -8,10 +8,10 @@
 
 // });
 
-let botn = document.getElementById('btn-main');
+let botn = document.querySelector('.btn-main');
 let headingOne = document.getElementById('headline');
-let items = document.getElementsByTagName('li');
-let highlights = document.getElementsByClassName('high');
+let items = document.querySelectorAll('li');
+let highlights = document.querySelectorAll('.high');
 
 for (const high of highlights) {
     high.style.backgroundColor = 'cornsilk';
