@@ -8,8 +8,7 @@ a daily todo list app that let you add or delete your tasks ### the project is s
 ## Used technologies ##
 * Javascript 
 	* HTML
-* SASS 
-	* CSS	
+* CSS 	
 * Git 
 
 ### Development tools ###
