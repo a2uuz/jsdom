@@ -4,20 +4,20 @@ btnCreate.addEventListener(`click`, () =>{
   // Local Variables
   const input = document.querySelector('.input-main');
   const list = document.querySelector('ul')
-  // Create new li List items
-  const item = document.createElement('li');
   
-//set the content by adding it to the input
-  item.innerHTML = input.value;
-  input.value = '';
+  list.insertAdjacentHTML(
+    `afterbegin`,
+    ` <li>${input.value}</li>`
+  )
 
-  //Add it to the dom || prepend from the top and append from the bottom
-  list.prepend(item);
+  input.value = '';
 
 // update button bgcolor and border when heading updates
 btnCreate.style.borderBottom = '5px solid deeppink'
 btnCreate.style.backgroundColor = 'mediumvioletred' 
 })
+
+
 
 // Hide and Show List 
 const toggleList = document.querySelector('.btn-toggle');
@@ -37,5 +37,11 @@ if (showList.style.display === 'none') {
   toggleList.innerHTML = 'Show List'
   showList.style.display = 'none';
 }
-
 });
+
+const btnRemove = document.querySelector('.btn-remove');
+btnRemove.addEventListener(`click`, () =>{
+
+  const lastChild = document.querySelector('li:last-child');
+  lastChild.remove();
+})
