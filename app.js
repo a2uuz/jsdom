@@ -1,25 +1,22 @@
-let botn = document.querySelector('.btn-main');
-let headingOne = document.getElementById('headline');
-botn.addEventListener(`click`, () =>{
+let btnCreate = document.querySelector('.btn-main');
 
+btnCreate.addEventListener(`click`, () =>{
   // Local Variables
   const input = document.querySelector('.input-main');
-  const headingOne = document.getElementById('headline');
-
-//  Asign to the grow class in the stylesheet with transitions
-  headingOne.className = 'grow';  
-
-/* innerHTML and textContent read and update 
-content in the DOM || and .value reads the value
-typed into the field */  
-headingOne.innerHTML = input.value;
+  const list = document.querySelector('ul')
+  // Create new li List items
+  const item = document.createElement('li');
+  
+//set the content by adding it to the input
+  item.innerHTML = input.value;
   input.value = '';
 
+  //Add it to the dom || prepend from the top and append from the bottom
+  list.prepend(item);
+
 // update button bgcolor and border when heading updates
-botn.style.borderBottom = '5px solid deeppink'
-botn.style.backgroundColor = 'mediumvioletred' 
-
-
+btnCreate.style.borderBottom = '5px solid deeppink'
+btnCreate.style.backgroundColor = 'mediumvioletred' 
 })
 
 // Hide and Show List 
