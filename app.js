@@ -1,31 +1,18 @@
-
-// let body = document.body;
-
-
-// body.addEventListener(`click`, () => {
-
-// alert (`You clicked the body page`);
-
-// });
-
 let botn = document.querySelector('.btn-main');
 let headingOne = document.getElementById('headline');
-let items = document.querySelectorAll('li');
-let highlights = document.querySelectorAll('.high');
-
-for (const high of highlights) {
-    high.style.backgroundColor = 'cornsilk';
-}
-
-
-const colors = ["#C2272D", "#F8931F", "#009245", "#0193D9", "#0C04ED", "#612F90"];
-
- for (let i = 0; i < items.length; i++) {
-      items[i].style.color = colors[i];    
-    }
 
 botn.addEventListener(`click`, () =>{
-  headingOne.style.fontSize = '6rem';  
-  headingOne.style.color = 'tomato';  
 
+  // Local Variables
+  const input = document.querySelector('.input-main');
+  const headingOne = document.getElementById('headline');
+
+//  Asign to the grow class in the stylesheet with transitions
+  headingOne.className = 'grow';  
+
+/* innerHTML and textContent read and update 
+content in the DOM || and .value reads the value
+typed into the field */  
+headingOne.innerHTML = input.value;
+  input.value = '';
 })
